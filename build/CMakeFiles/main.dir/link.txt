@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/error.cpp.o CMakeFiles/main.dir/src/http_conn.cpp.o CMakeFiles/main.dir/src/server.cpp.o -o main 
