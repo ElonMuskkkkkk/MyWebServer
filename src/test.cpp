@@ -8,6 +8,8 @@
 #include <iostream>
 #include <sys/epoll.h>
 #include <unistd.h>
+#include "error.h"
+#include "fcntl.h"
 
 using namespace std;
 
@@ -19,6 +21,7 @@ public:
             this->iSockFd = -1;
             this->iEpollFd = -1;
             memset(&oAddr, 0, sizeof(oAddr));
+            memset(&oEvent, 0, sizeof(oEvent));
             oAddr.sin_family = AF_INET;
             oAddr.sin_addr.s_addr = iIp;
             oAddr.sin_port = htons(usPort);
@@ -30,22 +33,21 @@ public:
             s_bind();
             s_listen();
             addfd();
+            setnonblock();
             wait();
       }
       void s_socket()
       {
-            iSockFd = socket(AF_INET, SOCK_STREAM, 0);
-            if (iSockFd < 0)
-            {
-                  cerr << "fail to create socket, err: " << strerror(errno) << endl;
-            }
+            if ((iSockFd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+                  error("socket", POS);
       }
 
       void s_bind()
       {
             if (bind(iSockFd, (sockaddr *)&oAddr, sizeof(oAddr)) < 0)
             {
-                  cerr << "fail to bind addr " << endl;
+                  cout << strerror(errno) << endl;
+                  error("bind", POS);
             }
       }
 
@@ -53,7 +55,7 @@ public:
       {
             if (listen(iSockFd, 100) < 0)
             {
-                  cerr << "fail to listen on " << endl;
+                  error("listen", POS);
             }
       }
 
@@ -61,15 +63,12 @@ public:
       {
             iEpollFd = epoll_create(1024);
             if (iEpollFd < 0)
-            {
-                  cerr << "fail to create epoll, err: " << strerror(errno) << endl;
-            }
-            epoll_event oEvent;
+                  error("epoll_create", POS);
             oEvent.events = EPOLLIN;
             oEvent.data.fd = iSockFd;
             if (epoll_ctl(iEpollFd, EPOLL_CTL_ADD, iSockFd, &oEvent) < 0)
             {
-                  cerr << "fail to add listen fd to epoll, err: " << strerror(errno) << endl;
+                  error("epoll_ctl", POS);
             }
       }
 
@@ -81,17 +80,29 @@ public:
                   int iFdCnt = epoll_wait(iEpollFd, aoEvents, 1024, -1);
                   if (iFdCnt < 0)
                   {
-                        cerr << "epoll wait error, err: " << strerror(errno) << endl;
+                        error("epoll_wait", POS);
                   }
                   else
                         cout << "success!" << endl;
             }
       }
 
+      void setnonblock(int fd = -1)
+      {
+            if (fd < 0)
+            {
+                  fd = iSockFd;
+            }
+            int flag = fcntl(fd, F_GETFL);
+            flag |= O_NONBLOCK;
+            fcntl(fd, F_SETFL, flag);
+      }
+
 private:
       int iSockFd;
       int iEpollFd;
       sockaddr_in oAddr;
+      epoll_event oEvent;
 };
 
 int main(int argc, char *argv[])

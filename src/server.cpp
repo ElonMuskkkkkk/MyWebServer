@@ -12,9 +12,9 @@ SERVER::SERVER()
       this->socketfd = -1;
       this->epollFd = -1;
       this->port = PORT;
-      memset(&family, 0, sizeof(sockaddr_in));
-      memset(&ev, 0, sizeof(epoll_event));
-      this->family.sin_addr.s_addr = htonl(INADDR_ANY);
+      memset(&family, 0, sizeof(family));
+      memset(&ev, 0, sizeof(ev));
+      this->family.sin_addr.s_addr = inet_addr(IP);
       this->family.sin_family = AF_INET;
       this->family.sin_port = htons(PORT);
 }
@@ -30,7 +30,7 @@ SERVER::~SERVER()
 void SERVER::start_up()
 {
       s_socket();
-      setnonblock();
+      // setnonblock();
       s_bind();
       s_listen();
       addfd();
