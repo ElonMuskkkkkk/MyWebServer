@@ -111,10 +111,38 @@ CMakeFiles/main.dir/src/http_conn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/http_conn.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuxingxiang/project/webserver/src/http_conn.cpp -o CMakeFiles/main.dir/src/http_conn.cpp.s
 
+CMakeFiles/main.dir/src/mylock.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/mylock.cpp.o: ../src/mylock.cpp
+CMakeFiles/main.dir/src/mylock.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/mylock.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mylock.cpp.o -MF CMakeFiles/main.dir/src/mylock.cpp.o.d -o CMakeFiles/main.dir/src/mylock.cpp.o -c /home/yuxingxiang/project/webserver/src/mylock.cpp
+
+CMakeFiles/main.dir/src/mylock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/mylock.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuxingxiang/project/webserver/src/mylock.cpp > CMakeFiles/main.dir/src/mylock.cpp.i
+
+CMakeFiles/main.dir/src/mylock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/mylock.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuxingxiang/project/webserver/src/mylock.cpp -o CMakeFiles/main.dir/src/mylock.cpp.s
+
+CMakeFiles/main.dir/src/mylog.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/mylog.cpp.o: ../src/mylog.cpp
+CMakeFiles/main.dir/src/mylog.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/mylog.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mylog.cpp.o -MF CMakeFiles/main.dir/src/mylog.cpp.o.d -o CMakeFiles/main.dir/src/mylog.cpp.o -c /home/yuxingxiang/project/webserver/src/mylog.cpp
+
+CMakeFiles/main.dir/src/mylog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/mylog.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuxingxiang/project/webserver/src/mylog.cpp > CMakeFiles/main.dir/src/mylog.cpp.i
+
+CMakeFiles/main.dir/src/mylog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/mylog.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuxingxiang/project/webserver/src/mylog.cpp -o CMakeFiles/main.dir/src/mylog.cpp.s
+
 CMakeFiles/main.dir/src/server.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/server.cpp.o: ../src/server.cpp
 CMakeFiles/main.dir/src/server.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/server.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/server.cpp.o -MF CMakeFiles/main.dir/src/server.cpp.o.d -o CMakeFiles/main.dir/src/server.cpp.o -c /home/yuxingxiang/project/webserver/src/server.cpp
 
 CMakeFiles/main.dir/src/server.cpp.i: cmake_force
@@ -125,12 +153,29 @@ CMakeFiles/main.dir/src/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuxingxiang/project/webserver/src/server.cpp -o CMakeFiles/main.dir/src/server.cpp.s
 
+CMakeFiles/main.dir/src/sql_pool.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/sql_pool.cpp.o: ../src/sql_pool.cpp
+CMakeFiles/main.dir/src/sql_pool.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/sql_pool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/sql_pool.cpp.o -MF CMakeFiles/main.dir/src/sql_pool.cpp.o.d -o CMakeFiles/main.dir/src/sql_pool.cpp.o -c /home/yuxingxiang/project/webserver/src/sql_pool.cpp
+
+CMakeFiles/main.dir/src/sql_pool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/sql_pool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuxingxiang/project/webserver/src/sql_pool.cpp > CMakeFiles/main.dir/src/sql_pool.cpp.i
+
+CMakeFiles/main.dir/src/sql_pool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/sql_pool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuxingxiang/project/webserver/src/sql_pool.cpp -o CMakeFiles/main.dir/src/sql_pool.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/src/error.cpp.o" \
 "CMakeFiles/main.dir/src/http_conn.cpp.o" \
-"CMakeFiles/main.dir/src/server.cpp.o"
+"CMakeFiles/main.dir/src/mylock.cpp.o" \
+"CMakeFiles/main.dir/src/mylog.cpp.o" \
+"CMakeFiles/main.dir/src/server.cpp.o" \
+"CMakeFiles/main.dir/src/sql_pool.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -138,10 +183,13 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/src/error.cpp.o
 main: CMakeFiles/main.dir/src/http_conn.cpp.o
+main: CMakeFiles/main.dir/src/mylock.cpp.o
+main: CMakeFiles/main.dir/src/mylog.cpp.o
 main: CMakeFiles/main.dir/src/server.cpp.o
+main: CMakeFiles/main.dir/src/sql_pool.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuxingxiang/project/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -201,6 +201,54 @@ src/http_conn.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/http_conn.cpp.s
 .PHONY : src/http_conn.cpp.s
 
+src/mylock.o: src/mylock.cpp.o
+.PHONY : src/mylock.o
+
+# target to build an object file
+src/mylock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylock.cpp.o
+.PHONY : src/mylock.cpp.o
+
+src/mylock.i: src/mylock.cpp.i
+.PHONY : src/mylock.i
+
+# target to preprocess a source file
+src/mylock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylock.cpp.i
+.PHONY : src/mylock.cpp.i
+
+src/mylock.s: src/mylock.cpp.s
+.PHONY : src/mylock.s
+
+# target to generate assembly for a file
+src/mylock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylock.cpp.s
+.PHONY : src/mylock.cpp.s
+
+src/mylog.o: src/mylog.cpp.o
+.PHONY : src/mylog.o
+
+# target to build an object file
+src/mylog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylog.cpp.o
+.PHONY : src/mylog.cpp.o
+
+src/mylog.i: src/mylog.cpp.i
+.PHONY : src/mylog.i
+
+# target to preprocess a source file
+src/mylog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylog.cpp.i
+.PHONY : src/mylog.cpp.i
+
+src/mylog.s: src/mylog.cpp.s
+.PHONY : src/mylog.s
+
+# target to generate assembly for a file
+src/mylog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mylog.cpp.s
+.PHONY : src/mylog.cpp.s
+
 src/server.o: src/server.cpp.o
 .PHONY : src/server.o
 
@@ -225,6 +273,30 @@ src/server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/server.cpp.s
 .PHONY : src/server.cpp.s
 
+src/sql_pool.o: src/sql_pool.cpp.o
+.PHONY : src/sql_pool.o
+
+# target to build an object file
+src/sql_pool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sql_pool.cpp.o
+.PHONY : src/sql_pool.cpp.o
+
+src/sql_pool.i: src/sql_pool.cpp.i
+.PHONY : src/sql_pool.i
+
+# target to preprocess a source file
+src/sql_pool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sql_pool.cpp.i
+.PHONY : src/sql_pool.cpp.i
+
+src/sql_pool.s: src/sql_pool.cpp.s
+.PHONY : src/sql_pool.s
+
+# target to generate assembly for a file
+src/sql_pool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sql_pool.cpp.s
+.PHONY : src/sql_pool.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,9 +315,18 @@ help:
 	@echo "... src/http_conn.o"
 	@echo "... src/http_conn.i"
 	@echo "... src/http_conn.s"
+	@echo "... src/mylock.o"
+	@echo "... src/mylock.i"
+	@echo "... src/mylock.s"
+	@echo "... src/mylog.o"
+	@echo "... src/mylog.i"
+	@echo "... src/mylog.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
+	@echo "... src/sql_pool.o"
+	@echo "... src/sql_pool.i"
+	@echo "... src/sql_pool.s"
 .PHONY : help
 
 
